@@ -6,12 +6,12 @@ def brute_force(text, pattern):
 
     flag = False
 
-    while i < l1:  # Iterar desde el índice 0 del texto
+    while i < l1:  # Iterar desde el índice 0 del texto hasta len-1 de texto
 
         j = 0  # Variable para el bucle del patrón
         count = 0  # Variable para contar cuántos caracteres coinciden
 
-        while j < l2:  # Iterar desde el índice 0 del patrón hasta len-1
+        while j < l2:  # Iterar desde el índice 0 del patrón hasta len-1 de patrón
             # Si el índice actual más el índice del patrón es menor que la longitud del texto y el carácter actual del texto es igual al carácter actual del patrón
             if i + j < l1 and text[i + j] == pattern[j]:
                 count += 1  # Incrementar el contador si los caracteres coinciden
