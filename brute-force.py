@@ -4,7 +4,7 @@ def brute_force(text, pattern):
 
     i = 0  # Variable para el bucle del texto
 
-    flag = False
+    flag = False  # Bandera para verificar si el patrón está presente en el texto
 
     while i < l1:  # Iterar desde el índice 0 del texto hasta len-1 de texto
 
