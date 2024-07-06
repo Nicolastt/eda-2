@@ -1,32 +1,29 @@
 graph = {
-    'START': {
-        'A': 6,
-        'B': 2
-    },
-    'A': {
-        'FIN': 1
-    },
-    'B': {
-        'A': 3,
-        'FIN': 5
-    },
-    'FIN': {}  # ! MUY IMPORTANTE
+    'S': {'A': 4, 'B': 8, 'C': 16},
+    'A': {'B': 3},
+    'B': {'C': 7, 'F':1},
+    'C': {'D': 2},
+    'F': {'C': 5, 'D': 6},
 }
 
 infinity = float('inf')
 
 costs = {
-    'A': 6,
-    'B': 2,
-    'FIN': infinity
+    'A': float('inf'),
+    'B': float('inf'),
+    'C': float('inf'),
+    'D': float('inf'),
+    'F': float('inf')
 }
 
 parents = {
-    'A': 'START',
-    'B': 'START',
-    'FIN': None
+    'S': None,
+    'A': None,
+    'B': None,
+    'C': None,
+    'D': None,
+    'F': None
 }
-
 processed = []
 
 
@@ -43,19 +40,15 @@ def find_lowest_cost_node(costs):
 
 node = find_lowest_cost_node(costs)
 while node is not None:
-    if node == 'FIN':
-        break  # Detener el proceso si alcanzamos 'FIN'
-
     cost = costs[node]
     neighbors = graph[node]
-    for n, weight in neighbors.items():
-        new_cost = cost + weight
+    for n in neighbors.keys():
+        new_cost = cost + neighbors[n]
         if costs[n] > new_cost:
             costs[n] = new_cost
             parents[n] = node
     processed.append(node)
     node = find_lowest_cost_node(costs)
-
 
 # Mostrar los resultados
 print("Costos mínimos:")
