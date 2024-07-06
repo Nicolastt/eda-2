@@ -33,5 +33,6 @@ def brute_force(text, pattern):
 
 brute_force('Hola mundo', 'mundo')
 brute_force('ababababcbbababab', 'abc')
+brute_force('ab ab', 'ab')
+brute_force('abccbabcca', 'bc')
 
-# "Shift" desplazamiento de un lugar.
