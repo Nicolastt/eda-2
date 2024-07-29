@@ -30,6 +30,7 @@ def dijkstra(graph, start, end):
         processed.append(node)
         node = find_lowest_cost_node(costs)
 
+    print(processed)
     # Return results
     return costs, parents
 
@@ -61,12 +62,14 @@ def shortest_path(graph, start, end):
 
 # Ejemplo de uso
 graph = {
-    'S': {'A': 4, 'B': 8, 'C': 16},
-    'A': {'B': 3},
-    'B': {'C': 7, 'F': 1},
-    'C': {'D': 2},
-    'D': {},
-    'F': {'C': 5, 'D': 6},
+    'S': {'A': 2, 'B': 1, 'C': 5},
+    'A': {'E': 4},
+    'B': {'C': 1,'D': 3},
+    'C': {'G': 2},
+    'D': {'G': 2, 'F': 5},
+    'E': {'D': 10},
+    'G': {'F': 10},
+    'F': {},
 }
 
 shortest_path(graph, 'S', 'F')
