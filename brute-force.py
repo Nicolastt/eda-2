@@ -30,9 +30,12 @@ def brute_force(text, pattern):
     if not flag:
         print("\nPattern is not all present in the text")
 
+print("Brute Force Algorithm")
+print("Exercise 1:")
+brute_force('ABDDCCABBCAABABC', 'AB')
+print("Exercise 2:")
+brute_force('ABDDCCABBCAABAB', 'ABA')
+print("Exercise 3:")
+brute_force('ABDDCCABB', 'CCC')
 
-brute_force('Hola mundo', 'mundo')
-brute_force('ababababcbbababab', 'abc')
-brute_force('ab ab', 'ab')
-brute_force('abccbabcca', 'bc')
 
