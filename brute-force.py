@@ -33,9 +33,12 @@ def brute_force(text, pattern):
 print("Brute Force Algorithm")
 print("Exercise 1:")
 brute_force('ABDDCCABBCAABABC', 'AB')
+print("---------------------------------")
 print("Exercise 2:")
 brute_force('ABDDCCABBCAABAB', 'ABA')
+print("---------------------------------")
 print("Exercise 3:")
 brute_force('ABDDCCABB', 'CCC')
+
 
 
