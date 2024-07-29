@@ -41,4 +41,6 @@ def find_kmp(T, P):
     return -1
 
 
-find_kmp('acacabacababacacac', 'acacac')
+print(find_kmp('thisisatesttext', 'test'))
+print(find_kmp('ababcabcdaaddab', 'abcabcda'))
+print(find_kmp('abcdabcaabd', 'ababc'))
